@@ -8,8 +8,8 @@ name = st.text_input("Enter your name")
 # 2. Email
 email = st.text_input("Enter your email")
 
-# 3. Age (replacement for password)
-age = st.number_input("Enter your age", min_value=1, max_value=120)
+# 3. Gender (Radio Button)
+gender = st.radio("Select your gender", ["Male", "Female"])
 
 # 4. Dropdown
 role = st.selectbox("Select your role", ["Student", "Teacher", "Admin"])
@@ -19,7 +19,7 @@ agree = st.checkbox("I agree to the terms and conditions")
 
 # Submit button
 if st.button("Register"):
-    if name and email and age and agree:
-        st.success(f"Registration successful for {name}, Age {age}, as {role}")
+    if name and email and gender and agree:
+        st.success(f"Registration successful for {name} ({gender}) as {role}")
     else:
         st.error("Please fill all fields and accept terms")
