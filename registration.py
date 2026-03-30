@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.title("User Registration Form")
+st.image("sunrise.jpg", caption="Sunrise by the mountains")
 
 # 1. Name
 name = st.text_input("Enter your name")
